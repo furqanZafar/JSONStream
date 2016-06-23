@@ -16,17 +16,32 @@
     "async",
     "parsing"
   ],
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "through": "global:through",
+    "jsonparse": "global:jsonparse"
+  },
   "dependencies": {
     "jsonparse": "^1.1.0",
     "through": ">=2.2.7 <3"
   },
   "devDependencies": {
-    "it-is": "~1",
     "assertions": "~2.2.2",
-    "render": "~0.1.1",
-    "trees": "~0.0.3",
+    "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
     "event-stream": "~0.7.0",
-    "tape": "~2.12.3"
+    "gulp": "^3.9.1",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.4",
+    "it-is": "~1",
+    "render": "~0.1.1",
+    "tape": "~2.12.3",
+    "trees": "~0.0.3",
+    "vinyl-source-stream": "^1.1.0"
   },
   "bin": "./index.js",
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://bit.ly/dominictarr)",
